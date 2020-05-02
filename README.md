@@ -19,3 +19,8 @@ washington.CSV
 ### Credits
 This was my first Python coding.  I pretty much did it all myself, with the
 help of some YouTube tutorials on Pandas libraries.
+
+### About my dog
+We just got a new puppy a few months ago.  It's kind of ironic, because he's
+a puppy and needs lots of attention.  But since we're all home with him
+during quarantine, he gets lots of attention.
