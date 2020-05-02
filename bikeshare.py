@@ -62,7 +62,7 @@ def get_filters():
     #have user specify a day of the year, via integer
     print("Please specify a day of the week in the following format:")
     print("Mon = 0, Tues = 1, Wed = 2, Thurs = 3, Fri = 4, Sat = 5, Sun = 6")
-    print("... or, type 7 to choose ALL DAYS")
+    print("Or, type 7 to choose ALL DAYS")
     while True:
         try:
             raw_day = int(input(">"))
@@ -115,7 +115,7 @@ def load_data(city, month, day):
 
     return df
 
-def view_data(df):
+def view_bike_data(df):
     """Displays raw data for the user to view, if they choose"""
 
     print("Would you like to view the 5 lines of raw data? Please type Yes or No")
@@ -234,7 +234,7 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
-        view_data(df)
+        view_bike_data(df)
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
