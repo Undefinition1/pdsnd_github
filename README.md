@@ -1,15 +1,21 @@
 ### Date created
-Include the date you created this project and README file.
+I created this project for the Python class at Udacity.  I added it to my
+repository on May 1, 2020
 
 ### Project Title
-Replace the Project Title
+PCBikeshare
 
 ### Description
-Describe what your project is about and what it does
+This project takes CSV data about bikeshares and does various data analysis
+on it.  Functions include finding the most common dates and times, and also
+displaying data about riders profiles (age, gender, etc.).
 
 ### Files used
-Include the files used
+bikeshare.py
+chicago.CSV
+new_york_city.CSV
+washington.CSV
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+This was my first Python coding.  I pretty much did it all myself, with the
+help of some YouTube tutorials on Pandas libraries.
