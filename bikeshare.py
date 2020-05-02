@@ -1,3 +1,4 @@
+#I am adding this comment at the top of my code for the Git portion of the project
 import time
 import pandas as pd
 import numpy as np
@@ -18,7 +19,7 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     #user inputs a city
     print("Please specify a city: Chicago, New York, or Washington.")
-    while True: 
+    while True:
         city= input("> ")
         city = city.lower()
         if ("chicago" in city) or ("new york" in city) or ("washington" in city):
@@ -30,7 +31,7 @@ def get_filters():
     # have user input a month
     print("Please specify a month, between January and June.")
     print("... or type \"All\" for all months:")
-    while True: 
+    while True:
         month = input("> ")
         month = month.lower()
         if ("all" in month):
@@ -57,13 +58,13 @@ def get_filters():
         else:
             print("Not a valid month.  Please try again.")
     print()
-    
+
     #have user specify a day of the year, via integer
     print("Please specify a day of the week in the following format:")
     print("Mon = 0, Tues = 1, Wed = 2, Thurs = 3, Fri = 4, Sat = 5, Sun = 6")
     print("... or, type 7 to choose ALL DAYS")
     while True:
-        try:   
+        try:
             raw_day = int(input(">"))
             if (raw_day >= 0) and (raw_day <= 7):
                 day = str(raw_day)
@@ -97,30 +98,30 @@ def load_data(city, month, day):
     else:
         city = ("washington.csv")
     df = pd.read_csv(city)
-    
+
     #convert start time and end time to panda datetime objects
     df["Start Time"] = pd.to_datetime(df["Start Time"])
     df["End Time"] = pd.to_datetime(df["End Time"])
-    
+
     #filter by month
     if ("0" not in month):
         df = df[df["Start Time"].dt.month == int(month)]
-    
+
     #filter by dayofweek
     if ("7" not in day):
         df = df[df["Start Time"].dt.dayofweek == int(day)]
-    
+
     print()
 
     return df
 
 def view_data(df):
     """Displays raw data for the user to view, if they choose"""
-    
+
     print("Would you like to view the 5 lines of raw data? Please type Yes or No")
     a = 0
     to_view = "y"
-    while (to_view in ["y", "yes"]) and (a+5 < df.shape[0]): 
+    while (to_view in ["y", "yes"]) and (a+5 < df.shape[0]):
         to_view = input("> ")
         to_view = to_view.lower()
         if ("y" in to_view) or ("yes" in to_view):
@@ -132,7 +133,7 @@ def view_data(df):
             break
         else:
             print("Please enter Yes or No")
-            
+
     print('-'*40)
 
 
